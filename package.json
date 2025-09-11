@@ -1,0 +1,31 @@
+{
+  "name": "text-translate-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.61.0",
+    "@clerk/nextjs": "^6.31.9",
+    "bootstrap": "^5.3.8",
+    "next": "15.5.2",
+    "openai": "^5.20.0",
+    "pdf-parse": "^1.1.1",
+    "pdf2json": "^3.2.0",
+    "pdfjs-dist": "^5.4.149",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-select": "^5.10.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "typescript": "5.9.2"
+  }
+}

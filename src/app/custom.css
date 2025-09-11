@@ -1,0 +1,324 @@
+
+/* custom.css */
+
+/* Apply a global background color */
+body {
+  background-color: #e0f2fe; /* light sky blue */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Signin Page CSS */
+
+/* Full screen wrapper with light sky background */
+.signin-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e0f2fe; /* light sky blue */
+  padding: 1rem;
+}
+
+/* Title above the sign-in form */
+.signin-title {
+  font-size: 1.75rem; /* text-2xl */
+  font-weight: 700;
+  color: #0284c7; /* sky blue dark */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Force internal Clerk form to take full width inside the card */
+.signin-card .clerk-form {
+  width: 100%;
+}
+
+/* Optional: Make buttons full width */
+.signin-card .clerk-button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 500px) {
+  .signin-card {
+    padding: 1.5rem;
+  }
+  .signin-title {
+    font-size: 1.5rem;
+  }
+}
+/* custom.css */
+
+
+/* ===========================
+   Signin Page CSS (Enhanced)
+   =========================== */
+
+/* Wrapper with gradient background */
+.signin-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7ff 0%, #f3f4f6 100%); /* sky blue → light gray */
+  padding: 1rem;
+}
+
+/* Card container for the sign-in form */
+.signin-card {
+  animation: fadeInUp 0.7s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signin-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Title above the sign-in form */
+.signin-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e3a8a; /* bold dark blue */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Subtitle (optional) */
+.signin-subtitle {
+  font-size: 1rem;
+  color: #64748b; /* soft slate gray */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Force internal Clerk form to take full width */
+.signin-card .clerk-form {
+  width: 100%;
+}
+
+/* Buttons full width + hover animation */
+.signin-card .clerk-button {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.25s ease-in-out;
+}
+
+.signin-card .clerk-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Links hover effect */
+.signin-card a {
+  color: #0284c7;
+  text-decoration: none;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.signin-card a:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+/* Animation for card entry */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signin-card {
+    padding: 1.5rem;
+  }
+  .signin-title {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+/* Signup Page CSS */
+
+/*Dashboard CSS FIle*/
+
+.dashboard-main {
+  padding: 2rem;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1200px;
+  min-height: 700px;
+  background-color: rgb(178, 185, 184);
+  padding-top: 120px;
+  margin-top: 120px;
+  border-radius: 50px;
+}
+
+/* UserButton top-right */
+.user-button-container {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+  width: 64px;
+  height: 64px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: #6b7280; /* gray */
+}
+
+/*Dashboard CSS FIle*/
+
+
+/*Customize CSS*/
+
+/* ===================== */
+/* Global Styles         */
+/* ===================== */
+body {
+  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+}
+
+/* ===================== */
+/* Dashboard Container   */
+/* ===================== */
+.dashboard-main {
+  padding: 2rem;
+  margin: 120px auto 0 auto;
+  position: relative;
+  max-width: 1200px;
+  min-height: 700px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding-top: 100px;
+
+  /* Subtle shadow for card look */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* Smooth entry animation */
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* ===================== */
+/* Header Styling        */
+/* ===================== */
+.dashboard-main h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0c4a6e; /* deep blue */
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-main p {
+  font-size: 1.1rem;
+  color: #475569; /* slate gray */
+}
+
+/* ===================== */
+/* Utility Enhancements  */
+/* ===================== */
+a, button {
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* ===================== */
+/* Animations            */
+/* ===================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Positioning wrapper (keeps arrow fixed on screen) */
+.back-arrow-wrapper {
+  position: fixed;
+  top: 16px;      /* distance from top */
+  left: 16px;     /* distance from left */
+  z-index: 9999;  /* above most content */
+  display: flex;
+  align-items: center;
+}
+
+/* The clickable element */
+.back-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9); /* slightly opaque background */
+  color: #0f172a; /* dark text/icon color; change to match theme */
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.08);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Hover / focus states */
+.back-arrow:hover,
+.back-arrow:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2,6,23,0.12);
+  outline: none;
+}
+
+/* Icon sizing (inherits color) */
+.back-arrow svg {
+  display: block;
+  color: inherit;
+}
+
+/* Optional: hide text on very small screens to save space */
+@media (max-width: 420px) {
+  .back-arrow-text {
+    display: none;
+  }
+  .back-arrow {
+    padding: 8px;
+    border-radius: 999px; /* circular for icon-only */
+  }
+}
+
+
+
+

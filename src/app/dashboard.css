@@ -1,0 +1,139 @@
+/* Wrap all styles with .feature-hub to avoid conflicts */
+.feature-hub {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-hub-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-hub-title {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.feature-hub-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.feature-hub-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none; /* remove link underline */
+}
+
+.feature-hub-circle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-hub-circle:hover::before {
+  opacity: 0.1;
+}
+
+/* Specific circle types */
+.feature-hub-translate {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+.feature-hub-translate::before {
+  background: white;
+}
+
+.feature-hub-generate {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+.feature-hub-generate::before {
+  background: white;
+}
+
+.feature-hub-pdf {
+  background: linear-gradient(135deg, #a8e6cf, #7fcdcd);
+}
+.feature-hub-pdf::before {
+  background: white;
+}
+
+.feature-hub-circle-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.feature-hub-icon {
+  font-size: 3rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.feature-hub-circle h3 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.feature-hub-circle:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-hub-circle:active {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-hub-circles {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .feature-hub-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .feature-hub-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .feature-hub-icon {
+    font-size: 2.5rem;
+  }
+  
+  .feature-hub-circle h3 {
+    font-size: 1rem;
+  }
+}
