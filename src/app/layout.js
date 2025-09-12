@@ -26,54 +26,54 @@ export default function RootLayout({ children }) {
 
             {/* Links (Center) */}
             <ul className="ai-navbar-links">
-              {/* <SignedIn>
+              <SignedIn>
                 <li><Link href="/">Home</Link></li>
-              </SignedIn> */}
-              <li><Link href="#">Features</Link></li>
-              <li><Link href="#">About</Link></li>
-              <li><Link href="#">Contact Us</Link></li>
+              </SignedIn>
+              <li><Link href="/">Features</Link></li>
+              <li><Link href="/">About</Link></li>
+              <li><Link href="/">Contact Us</Link></li>
             </ul>
 
             {/* UserButton (Right) */}
-            {/* <SignedIn>
+            <SignedIn>
               <div className="ai-navbar-user">
                 <UserButton
                   appearance={{
                     elements: {
-                      userButtonPopoverCard: {
+                      userButtonPopoverCard:`
                         background: "#161b23",
                         color: "#e3eeff",
                         boxShadow: "0 0 30px #14f7ff55, 0 2px 8px #1cf8ff20",
                         border: "1.5px solid #233248",
                         borderRadius: "22px",
                         padding: "18px",
-                      },
-                      userButtonPopoverActionButton: {
+                      `,
+                      userButtonPopoverActionButton: `
                         color: "#12eafd",
                         background: "#151d29",
                         borderRadius: "12px",
                         fontWeight: 600,
                         margin: "3px 0"
-                      },
-                      userButtonPopoverActionButtonIcon: {
+                      `,
+                      userButtonPopoverActionButtonIcon: `
                         color: "#12eafd",
-                      },
-                      userButtonPopoverActionButton__signOut: {
+                      `,
+                      userButtonPopoverActionButton__signOut: `
                         color: "#ff65a3",
                         background: "#141a1c"
-                      }
+                      `
                     },
-                    variables: {
+                    variables: `
                       colorPrimary: "#12eafd",
                       colorText: "#e3eeff",
                       colorBackground: "#181b23",
                       borderRadius: "22px",
                       fontSize: "15px"
-                    }
+                    `
                   }}
                 />
               </div>
-            </SignedIn> */}
+            </SignedIn>
           </nav>
 
 

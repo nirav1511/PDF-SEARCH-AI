@@ -12,7 +12,7 @@ const isProtectedRoute = createRouteMatcher([
   '/',
   '/pdfai',
 
-  '/sign-up(.*)',
+
 ])
 
 export default clerkMiddleware(async (auth, req) => {
