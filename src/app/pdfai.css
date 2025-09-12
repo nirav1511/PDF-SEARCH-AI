@@ -1,230 +1,141 @@
-/* PDF AI Page Styling (Scoped with pdfai-) */
-
-/* Layout */
-.pdfai-main {
+body, .pdfai-main {
+  background: #101216;
+  color: #e3eeff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   min-height: 100vh;
+  margin: 0;
+}
+
+/* Center PDF AI container */
+.pdfai-main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);
-  padding: 1.5rem;
-  font-family: sans-serif;
+  min-height: 100vh;
+  padding-top: 4rem; /* Add or adjust this line for upper space */
+  
 }
 
+/* PDF AI Card Styling */
 .pdfai-container {
+  background: #181b23;
+  border-radius: 26px;
+  box-shadow: 0 0 60px 0 #1bf6ff43, 0 6px 32px -8px #13ebfd55;
+  border: 2px solid #212c38;
+  padding: 44px 34px 32px 34px;
+  max-width: 450px;
   width: 100%;
-  max-width: 42rem;
-  background: #fff;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.08);
-  border-radius: 1rem;
-  padding: 2rem;
+  margin: 48px auto 36px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 /* Title */
 .pdfai-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #3730a3;
-  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.07em;
+  font-weight: 800;
   text-align: center;
+  margin-bottom: 22px;
+  color: #f7ffff;
+  text-shadow: 0 0 10px #23e4fa5a, 0 0 18px #17f7ff53;
 }
 
 /* Form */
-.pdfai-form > * + * {
-  margin-top: 1.25rem;
+.pdfai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
 .pdfai-label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #4b5563;
-  margin-bottom: 0.25rem;
-}
-
-/* File Input */
-.pdfai-file-input {
-  width: 100%;
-  font-size: 0.875rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.pdfai-file-input::file-selector-button {
-  margin-right: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  font-size: 0.875rem;
+  color: #35daff;
   font-weight: 600;
-  background: #eef2ff;
-  color: #3730a3;
-  cursor: pointer;
-  transition: background 0.2s;
+  margin-bottom: 7px;
+  display: block;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 8px #13ebfd55;
 }
 
-.pdfai-file-input::file-selector-button:hover {
-  background: #e0e7ff;
-}
-
-/* File List */
-.pdfai-file-list {
-  margin-top: 0.5rem;
-  list-style: disc inside;
-  font-size: 0.875rem;
-  color: #4b5563;
-}
-
-.pdfai-file-list li:hover {
-  color: #3730a3;
-}
-
-/* Text Input */
+.pdfai-file-input,
 .pdfai-text-input {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
+  border: none;
+  border-radius: 9px;
+  background: #171b26;
+  color: #e3eeff;
   font-size: 1rem;
-  transition: border 0.2s, box-shadow 0.2s;
+  padding: 11px 14px;
+  margin-top: 3px;
+  margin-bottom: 7px;
+  box-shadow: 0 0 8px #13ebfd2a;
+  outline: none;
+  transition: box-shadow 0.16s, border 0.18s;
+}
+.pdfai-file-input:focus,
+.pdfai-text-input:focus {
+  box-shadow: 0 0 18px #25e2ff99;
 }
 
-.pdfai-text-input:focus {
-  outline: none;
-  border-color: #4338ca;
-  box-shadow: 0 0 0 2px rgba(67, 56, 202, 0.3);
+.pdfai-file-list {
+  margin: 7px 0 0 4px;
+  padding: 0;
+  list-style: none;
+  color: #8efcff;
+  font-size: 0.98rem;
 }
 
 /* Button */
 .pdfai-button {
-  width: 100%;
-  padding: 0.75rem;
-  background: #4338ca;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 0.5rem;
+  margin-top: 5px;
+  padding: 0.85em 2.5em;
+  border-radius: 2em;
+  background: #0dfaff;
+  color: #13222c;
+  font-size: 1.07rem;
+  font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  box-shadow: 0 2px 18px #1befff70, 0 1.5px 12px #11fff940;
+  letter-spacing: 0.07em;
+  transition: background 0.16s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+}
+.pdfai-button:hover:not(:disabled),
+.pdfai-button:focus:not(:disabled) {
+  background: #19d7db;
+  color: #fff;
+  box-shadow: 0 2px 28px #36fddc35, 0 0px 20px #22f7ff99;
+  transform: translateY(-2px) scale(1.045);
+}
+.pdfai-button.loading {
+  background: #60f0f7;
+  color: #373f48;
+  opacity: 0.6;
+  cursor: wait;
 }
 
-.pdfai-button:hover:not(:disabled) {
-  background: #3730a3;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.3);
-}
-
-.pdfai-button:disabled {
-  background: #9ca3af;
-  cursor: not-allowed;
-}
-
-/* Loading Animation */
-.pdfai-button.loading::after {
-  content: "";
-  width: 16px;
-  height: 16px;
-  margin-left: 8px;
-  border: 2px solid transparent;
-  border-top: 2px solid white;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  display: inline-block;
-}
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* Response */
+/* AI Response Box */
 .pdfai-response {
-  margin-top: 2rem;
-  padding: 1.25rem;
-  border: 1px solid #e0e7ff;
-  border-radius: 0.75rem;
-  background: #eef2ff;
-  animation: fadeIn 0.3s ease-in-out;
+  background: #121a22;
+  color: #90f7ff;
+  margin-top: 30px;
+  border-radius: 14px;
+  padding: 18px 16px 13px 17px;
+  box-shadow: 0 0 18px #17eaff40;
+  font-size: 1.03rem;
+  word-break: break-word;
 }
 .pdfai-response strong {
-  color: #3730a3;
-}
-.pdfai-response p {
-  margin-top: 0.5rem;
-  color: #1f2937;
-  line-height: 1.6;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  color: #19eaf7;
+  font-size: 1.08rem;
+  font-weight: 700;
 }
 
 /* Responsive */
-@media (max-width: 640px) {
+@media (max-width: 560px) {
   .pdfai-container {
-    padding: 1.5rem;
-  }
-  .pdfai-title {
-    font-size: 1.25rem;
+    max-width: 94vw;
+    padding: 7vw 4vw 4vw 4vw;
   }
 }
-.user-button-container {
-  position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 50;
-  width: 64px;
-  height: 64px;
-}
-
-/* Positioning wrapper (keeps arrow fixed on screen) */
-.back-arrow-wrapper {
-  position: fixed;
-  top: 16px;      /* distance from top */
-  left: 16px;     /* distance from left */
-  z-index: 9999;  /* above most content */
-  display: flex;
-  align-items: center;
-}
-
-/* The clickable element */
-.back-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.9); /* slightly opaque background */
-  color: #0f172a; /* dark text/icon color; change to match theme */
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(2,6,23,0.08);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-/* Hover / focus states */
-.back-arrow:hover,
-.back-arrow:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(2,6,23,0.12);
-  outline: none;
-}
-
-/* Icon sizing (inherits color) */
-.back-arrow svg {
-  display: block;
-  color: inherit;
-}
-
-/* Optional: hide text on very small screens to save space */
-@media (max-width: 420px) {
-  .back-arrow-text {
-    display: none;
-  }
-  .back-arrow {
-    padding: 8px;
-    border-radius: 999px; /* circular for icon-only */
-  }
-}
-

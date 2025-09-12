@@ -10,10 +10,31 @@ export default function Page() {
   const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
+  const [modalMsg, setModalMsg] = useState("");
+
+
+function Modal({ message, onClose }) {
+  return (
+    <div className="ai-modal-overlay">
+      <div className="ai-modal-box">
+        <div className="ai-modal-message">{message}</div>
+        <button className="ai-modal-btn" onClick={onClose}>OK</button>
+      </div>
+    </div>
+  );
+}
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (files.length === 0 || !prompt) return;
+    if (files.length === 0 || !prompt) {
+      let missing = [];
+      if (files.length === 0) missing.push("PDF file");
+      if (!prompt) missing.push("question");
+      setModalMsg(
+        `Please provide the following field${missing.length > 1 ? "s" : ""}: ${missing.join(" & ")}`
+      );
+      return;
+    }
 
     setLoading(true);
     setResult("");
@@ -42,11 +63,7 @@ export default function Page() {
 
   return (
     <main className="pdfai-main">
-      {/* <div className="back-arrow-wrapper">
-        <Link href="/" className="back-arrow">
-          <span className="back-arrow-text">Home</span>
-        </Link>
-      </div> */}
+      
       <div className="pdfai-container">
        
         <h1 className="pdfai-title">📄 Ask AI about PDFs</h1>
@@ -102,6 +119,10 @@ export default function Page() {
           </div>
         )}
       </div>
+
+      {modalMsg && (
+        <Modal message={modalMsg} onClose={() => setModalMsg("")} />
+      )}
     </main>
   );
 }

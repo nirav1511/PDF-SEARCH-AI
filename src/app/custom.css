@@ -1,324 +1,697 @@
-
-/* custom.css */
-
-/* Apply a global background color */
 body {
-  background-color: #e0f2fe; /* light sky blue */
+  background: #101216;
+  color: #e3eeff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-/* Signin Page CSS */
-
-/* Full screen wrapper with light sky background */
-.signin-wrapper {
+/* Center feature-hub vertically and horizontally */
+.feature-hub {
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   min-height: 100vh;
-  background-color: #e0f2fe; /* light sky blue */
-  padding: 1rem;
 }
 
-/* Title above the sign-in form */
-.signin-title {
-  font-size: 1.75rem; /* text-2xl */
-  font-weight: 700;
-  color: #0284c7; /* sky blue dark */
-  margin-bottom: 1rem;
-  text-align: center;
+body {
+  overflow-x: hidden;
 }
 
-/* Force internal Clerk form to take full width inside the card */
-.signin-card .clerk-form {
+/* Hub Content Container */
+.feature-hub-container {
+  background: #181b23;
+  border-radius: 32px;
+  box-shadow: 0 0 70px 0 #0ba6cf38, 0 8px 36px -10px #1098e470;
+  padding: 42px 36px 54px 36px;
+  border: 2px solid #212c38;
+  min-width: 320px;
+  max-width: 480px;
   width: 100%;
-}
-
-/* Optional: Make buttons full width */
-.signin-card .clerk-button {
-  width: 100%;
-  margin-top: 1rem;
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 500px) {
-  .signin-card {
-    padding: 1.5rem;
-  }
-  .signin-title {
-    font-size: 1.5rem;
-  }
-}
-/* custom.css */
-
-
-/* ===========================
-   Signin Page CSS (Enhanced)
-   =========================== */
-
-/* Wrapper with gradient background */
-.signin-wrapper {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.feature-hub-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 7px #65ffe37a, 0 0 20px #1fecff22;
+  margin-bottom: 8px;
+}
+
+.feature-hub-sub {
+  font-size: 1.10rem;
+  text-align: center;
+  color: #38cfff;
+  margin-bottom: 40px;
+  font-weight: 400;
+  text-shadow: 0 2px 12px #1394e432;
+  letter-spacing: 0.04em;
+}
+
+/* Circles Section */
+.feature-hub-circles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+}
+.feature-hub-circle {
+  width: 270px;    /* Increased from 210px */
+  height: 270px;   /* Increased from 210px */
+  border-radius: 50%;
+  background: #101418;
+  box-shadow: 0 0 55px 6px #3effe3ad, 0 0 96px 24px #12dad947;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #e0f7ff 0%, #f3f4f6 100%); /* sky blue → light gray */
-  padding: 1rem;
-}
-
-/* Card container for the sign-in form */
-.signin-card {
-  animation: fadeInUp 0.7s ease-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.signin-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* Title above the sign-in form */
-.signin-title {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #1e3a8a; /* bold dark blue */
-  margin-bottom: 0.5rem;
   text-align: center;
-}
-
-/* Subtitle (optional) */
-.signin-subtitle {
-  font-size: 1rem;
-  color: #64748b; /* soft slate gray */
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-/* Force internal Clerk form to take full width */
-.signin-card .clerk-form {
-  width: 100%;
-}
-
-/* Buttons full width + hover animation */
-.signin-card .clerk-button {
-  width: 100%;
-  margin-top: 1rem;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: all 0.25s ease-in-out;
-}
-
-.signin-card .clerk-button:hover {
-  transform: translateY(-2px);
-  opacity: 0.95;
-}
-
-/* Links hover effect */
-.signin-card a {
-  color: #0284c7;
-  text-decoration: none;
-  transition: opacity 0.25s, transform 0.25s;
-}
-
-.signin-card a:hover {
-  opacity: 0.8;
-  transform: translateY(-1px);
-}
-
-/* Animation for card entry */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
-@media (max-width: 500px) {
-  .signin-card {
-    padding: 1.5rem;
-  }
-  .signin-title {
-    font-size: 1.6rem;
-  }
-}
-
-
-
-/* Signup Page CSS */
-
-/*Dashboard CSS FIle*/
-
-.dashboard-main {
-  padding: 2rem;
-  margin: 0 auto;
+  padding: 20px 18px;           /* Extra padding for text comfort */
+  overflow: hidden;
   position: relative;
-  max-width: 1200px;
-  min-height: 700px;
-  background-color: rgb(178, 185, 184);
-  padding-top: 120px;
-  margin-top: 120px;
-  border-radius: 50px;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.18s;
+}
+.feature-hub-circle h3 {
+  font-size: 1.13rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 8px 0 8px 0;
 }
 
-/* UserButton top-right */
+.feature-hub-circle p {
+  font-size: 1.02rem;
+  color: #7aefff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 1.5;
+  word-break: break-word;
+  max-height: 7.5em;           /* Room for more text */
+  overflow: hidden;
+}
+
+
+.try-now-btn {
+  display: inline-block;
+  margin: 28px auto 0 auto;
+  padding: 0.9em 2.5em;
+  background: #0dfaff;
+  color: #131a23;
+  font-weight: 700;
+  font-size: 1.07rem;
+  letter-spacing: 0.08em;
+  border-radius: 2em;
+  box-shadow: 0 2px 20px #1befff70, 0 1.5px 12px #11fff940;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.15s;
+}
+
+.try-now-btn:hover, .try-now-btn:focus {
+  background: #1fd7db;
+  color: #fff;
+  box-shadow: 0 2px 32px #36fddc35, 0 0px 22px #22f7ff99;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.down-arrow {
+  font-size: 2.8rem;
+  color: #12f4ff;
+  text-align: center;
+  margin: 22px auto 0 auto;
+  filter: drop-shadow(0 0 8px #18fff9ad);
+  animation: bounceDown 1.8s infinite;
+  width: 100%;
+}
+
+
+.feature-hub-circle:hover {
+  box-shadow: 0 0 55px 6px #3effe3ad, 0 0 96px 24px #12dad947, 0 7px 38px -7px #069fee90;
+  border-color: #19ffd4;
+  transform: scale(1.045);
+  background: #171c24;
+  z-index: 2;
+}
+
+.circle-icon {
+  font-size: 2.9rem;
+  margin-bottom: 13px;
+  filter: drop-shadow(0 0 16px #1affffd0);
+  color: #21e3e3;
+  display: inline-block;
+  text-align: center;
+}
+.feature-hub-circle h3 {
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0 7px 0;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-shadow: 0 4px 15px #11f7ee14;
+}
+.feature-hub-circle p {
+  color: #7aefff;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 10px;
+  font-weight: 400;
+  opacity: 0.89;
+  text-shadow: 0 2px 14px #13f7fc13;
+}
+
+/* Top Home/User bar */
 .user-button-container {
   position: fixed;
-  top: 16px;
-  right: 16px;
-  z-index: 50;
-  width: 64px;
-  height: 64px;
+  top: 2rem;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  z-index: 101;
 }
 
-/* Dashboard Header */
-.dashboard-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  margin-top: 3rem;
-}
-
-.dashboard-header h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.dashboard-header p {
-  color: #6b7280; /* gray */
-}
-
-/*Dashboard CSS FIle*/
-
-
-/*Customize CSS*/
-
-/* ===================== */
-/* Global Styles         */
-/* ===================== */
-body {
-  background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e293b;
-}
-
-/* ===================== */
-/* Dashboard Container   */
-/* ===================== */
-.dashboard-main {
-  padding: 2rem;
-  margin: 120px auto 0 auto;
-  position: relative;
-  max-width: 1200px;
-  min-height: 700px;
-  background: #ffffff;
-  border-radius: 24px;
-  padding-top: 100px;
-
-  /* Subtle shadow for card look */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-
-  /* Smooth entry animation */
-  animation: fadeInUp 0.8s ease-out;
-}
-
-/* ===================== */
-/* Header Styling        */
-/* ===================== */
-.dashboard-main h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #0c4a6e; /* deep blue */
-  margin-bottom: 0.5rem;
-}
-
-.dashboard-main p {
-  font-size: 1.1rem;
-  color: #475569; /* slate gray */
-}
-
-/* ===================== */
-/* Utility Enhancements  */
-/* ===================== */
-a, button {
-  transition: all 0.3s ease;
-}
-
-a:hover, button:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
-}
-
-/* ===================== */
-/* Animations            */
-/* ===================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Positioning wrapper (keeps arrow fixed on screen) */
-.back-arrow-wrapper {
-  position: fixed;
-  top: 16px;      /* distance from top */
-  left: 16px;     /* distance from left */
-  z-index: 9999;  /* above most content */
+.back-arrow {
+  background: #161b2c;
+  color: #88eaff;
+  border-radius: 16px;
+  padding: 0.65em 1.25em;
+  box-shadow: 0 3px 18px #1cffee29, 0 1.5px 8px #11fff950;
   display: flex;
   align-items: center;
-}
-
-/* The clickable element */
-.back-arrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9); /* slightly opaque background */
-  color: #0f172a; /* dark text/icon color; change to match theme */
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(2,6,23,0.08);
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.08rem;
+  letter-spacing: 0.06em;
+  border: 2px solid #133e54;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.back-arrow:hover, .back-arrow:focus {
+  background: #151f2c;
+  color: #fff;
+  box-shadow: 0 2px 28px #36fddc35, 0 2.5px 14px #22f7ff77;
+  border-color: #19ffd4;
+}
+.back-arrow-text {
+  margin-left: 2px;
+}
+.userButtonAvatarBox {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  box-shadow: 0 3px 25px #1ef6fa4a, 0 2.5px 10px #22f7ff55;
+  overflow: hidden;
+  background: #141d25;
+}
+.userButtonAvatarBox:hover {
+  box-shadow: 0 0 42px #2cfff320, 0 8px 24px -7px #11fff933;
+  outline: 2px solid #12ffe9;
+  outline-offset: 2px;
 }
 
-/* Hover / focus states */
-.back-arrow:hover,
-.back-arrow:focus {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(2,6,23,0.12);
+/* Responsive tweaks for small screens */
+@media (max-width: 700px) {
+  .feature-hub-container {
+    min-width: unset;
+    max-width: 98vw;
+    padding: 7vw 3vw 28px 3vw;
+  }
+  .feature-hub-circle {
+    width: 85vw;
+    max-width: 170px;
+    height: 120px;
+    min-width: 105px;
+    min-height: 100px;
+    border-radius: 60vw;
+  }
+  .user-button-container {
+    padding: 0 1vw;
+    top: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .feature-hub-circle {
+    width: 78vw;
+    max-width: 170px;
+    height: 120px;
+    min-width: 105px;
+    min-height: 100px;
+    border-radius: 60vw;
+    padding: 8px 6px;
+  }
+  .feature-hub-circle p {
+    font-size: 0.89rem;
+    max-height: 3.9em;
+  }
+}
+
+@keyframes bounceDown {
+  0%, 100%   { transform: translateY(0); }
+  50%        { transform: translateY(8px); }
+}
+
+
+
+.ai-modal-overlay {
+  position: fixed;
+  z-index: 10001;
+  inset: 0;
+  background: rgba(12,22,32,0.78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-modal-box {
+  background: #161b23;
+  border-radius: 20px;
+  border: 2px solid #15f4ff64;
+  box-shadow: 0 0 60px #12eafd66, 0 12px 38px -7px #09eeff44;
+  padding: 34px 28px 18px 28px;
+  min-width: 260px;
+  max-width: 92vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ai-modal-message {
+  color: #1beaff;
+  font-weight: 600;
+  font-size: 1.09rem;
+  margin-bottom: 18px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.ai-modal-btn {
+  padding: 0.7em 2.8em;
+  background: #0dfaff;
+  color: #131a23;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 1.5em;
+  border: none;
+  box-shadow: 0 2px 14px #1befff79, 0 1.5px 8px #11fff940;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s, box-shadow 0.17s, transform 0.13s;
+}
+
+.ai-modal-btn:hover,
+.ai-modal-btn:focus {
+  background: #19d7db;
+  color: #fff;
+  box-shadow: 0 2px 28px #36fddc35, 0 0px 22px #22f7ff99;
+  transform: scale(1.045);
+}
+
+
+.cl-userButtonAvatarBox {
+  box-shadow: 0 0 16px#19d7db;
+  border-radius: 50% !important;
+  transition: box-shadow 0.16s;
+}
+.cl-userButtonAvatarBox:hover {
+  box-shadow: 0 0 36px #12eafd, 0 0 68px #0dfaff40;
+}
+
+/* login*/
+
+
+
+body, .signin-wrapper {
+  background: #101216;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Center the card vertically and horizontally */
+.signin-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-card {
+  background: #181b23;
+  border-radius: 30px;
+  box-shadow:
+    0 0 58px 0 #0df6ff43,
+    0 7px 32px -10px #00fff0a2;
+  border: 2px solid #202834;
+  padding: 32px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    width: 60vw;
+  max-width: 420px;
+  min-width: 320px;
+  /* Glow behind Clerk card */
+  position: relative;
+}
+
+
+
+.signin-card > *:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Neon container visible behind Clerk card */
+.signin-card::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%;
+  height: 110%;
+  background: transparent;
+  box-shadow: 0 0 100px 18px #14f7ff7a;
+  border-radius: 35px;
+  z-index: 0;
+}
+
+/* Keep Clerk card visually on top */
+.signin-card > * {
+  z-index: 1;
+  position: relative;
+}
+
+/* Responsive for small screens */
+@media (max-width: 510px) {
+  .signin-card {
+    min-width: unset;
+    max-width: 99vw;
+    padding: 9vw 0.5vw 4vw 0.5vw;
+  }
+}
+
+
+
+
+/* navbar*/
+
+.pdfai-button {
+  background: #0dfaff;
+  color: #131a23;
+  font-weight: 700;
+  font-size: 1.07rem;
+  padding: 0.85em 2.5em;
+  border-radius: 2em;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 12px #0dfaff99, 0 2px 18px #0dfaff88;
+  letter-spacing: 0.07em;
+  transition: 
+    background 0.15s,
+    color 0.15s,
+    box-shadow 0.18s,
+    transform 0.13s;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdfai-button:hover, .pdfai-button:focus {
+  background: #12eafd;
+  color: #fff;
+  box-shadow: 0 0 28px #1befff, 0 4px 24px #12eafd66;
+  transform: scale(1.04);
+  animation: neonPulse 1.1s infinite alternate;
+}
+
+/* PULSE effect keyframes */
+@keyframes neonPulse {
+  0% { box-shadow: 0 0 12px #12eafd99, 0 2px 18px #0dfaff88; }
+  100% { box-shadow: 0 0 32px #12eafd, 0 8px 28px #43f7ffbb; }
+}
+
+/* Optional: animated glow border */
+.pdfai-button::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 2em;
+  pointer-events: none;
+  border: 2px solid #12eafd;
+  opacity: 0;
+  transition: opacity 0.18s;
+}
+.pdfai-button:hover::after,
+.pdfai-button:focus::after {
+  opacity: 0.54;
+  animation: borderGlow 1.3s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% { box-shadow: 0 0 6px #12eafd66; border-color: #12eafd; }
+  100% { box-shadow: 0 0 24px #09faffcc; border-color: #43ffff; }
+}
+
+
+.ai-navbar-logo {
+  color: #19ffd4;
+  font-size: 1.43rem;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-shadow: 0 0 18px #12eafd, 0 1.5px 15px #13e3ef66;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.ai-logo-icon {
+  width: 2.2em;
+  height: 2.2em;
+  margin-right: 0.18em;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 12px #14fff8aa);
+  /* If using react-icons, override color: */
+  color: #18e6ef;
+}
+.ai-navbar-logo span {
+  color: #3beaed;
+  font-weight: 700;
+}
+
+
+.ai-navbar {
+  width: 100vw;
+  background: #14171f;
+  box-shadow: 0 2px 22px #10effb25, 0 0.5px 2px #12eafd30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3.5vw;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+.ai-navbar-logo {
+  color: #12eafd;
+  font-size: 1.43rem;
+  font-weight: 900;
+  letter-spacing: 0.10em;
+  text-shadow: 0 0 18px #12eafd, 0 1.5px 15px #13e3ef66;
+}
+.ai-navbar-logo span {
+  color: #3beaed;
+  font-weight: 700;
+}
+
+.ai-navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2.6vw;
+  margin: 0;
+  padding: 0;
+}
+
+.ai-navbar-links li a {
+  color: #12eafd;
+  font-size: 1.09rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.5em 1.25em;
+  border-radius: 22px;
+  text-decoration: none;
+  background: #151e27;
+  box-shadow: 0 0 0 transparent;
+  transition: color 0.26s, box-shadow 0.18s, background 0.17s, transform 0.17s;
+  display: inline-block;
+}
+
+.ai-navbar-links li a:hover,
+.ai-navbar-links li a:focus {
+  color: #12eafd;
+  background: #182e3b;
+  box-shadow: 0 0 18px #12eafd77, 0 2px 16px #12eafd2e;
+  transform: scale(1.05);
   outline: none;
 }
 
-/* Icon sizing (inherits color) */
-.back-arrow svg {
-  display: block;
-  color: inherit;
+@media (max-width: 700px) {
+  .ai-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.1rem 2.5vw;
+    gap: 9px;
+  }
+  .ai-navbar-logo {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+  .ai-navbar-links {
+    gap: 1vw;
+  }
+  .ai-navbar-links li a {
+    padding: 0.40em 1em;
+    font-size: 0.99rem;
+  }
 }
 
-/* Optional: hide text on very small screens to save space */
-@media (max-width: 420px) {
-  .back-arrow-text {
-    display: none;
-  }
-  .back-arrow {
-    padding: 8px;
-    border-radius: 999px; /* circular for icon-only */
-  }
+/* footer*/
+
+.ai-footer {
+  background: #111318;
+  color: #e3eeff;
+  padding: 46px 8vw 20px 8vw;
+  box-shadow: 0 -2px 50px #12eafd18;
+  border-top: 1.7px solid #162b32;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
+.ai-footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
 
+.ai-footer-col {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
 
+.ai-footer-logo {
+  color: #12eafd;
+  font-size: 1.39rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 18px #12eafd, 0 1.5px 15px #13e3ef66;
+}
+
+.ai-footer-logo span {
+  color: #3beaed;
+  font-weight: 700;
+}
+
+.ai-footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.ai-footer-socials a {
+  font-size: 1.22rem;
+  color: #21eefd;
+  background: #151c21;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.17s, box-shadow 0.17s;
+  box-shadow: 0 0px 10px #0beeff14;
+  text-decoration: none;
+}
+.ai-footer-socials a:hover {
+  background: #1de7ef;
+  color: #0c1621;
+  box-shadow: 0 0px 16px #12eafd, 0 1.7px 10px #22eafd70;
+}
+
+.ai-footer-apps {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.ai-footer-apps img {
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
+  background: #181d23;
+  border-radius: 12px;
+  box-shadow: 0 0 14px #12eafd18;
+}
+.ai-footer-col h4 {
+  font-size: 1.09rem;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+  color: #12eafd;
+}
+.ai-footer-col a {
+  color: #bffcff;
+  text-decoration: none;
+  font-size: 1.01rem;
+  margin-bottom: 5px;
+  transition: color 0.18s;
+}
+.ai-footer-col a:hover {
+  color: #0dfaff;
+}
+.ai-footer-bottom {
+  text-align: center;
+  color: #54e4ff;
+  font-size: 0.98rem;
+  letter-spacing: 0.03em;
+  border-top: 1px solid #18282a;
+  padding-top: 19px;
+  margin-top: 15px;
+  opacity: 0.67;
+}
+
+@media (max-width: 900px) {
+  .ai-footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .ai-footer {
+    padding: 38px 3vw 12px 3vw;
+  }
+}
 
