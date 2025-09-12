@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider
       signInUrl="/login"
       signUpUrl="/signup"
-      afterSignInUrl="/"
+      
     >
       <html lang="en">
         <body>
@@ -26,16 +26,16 @@ export default function RootLayout({ children }) {
 
             {/* Links (Center) */}
             <ul className="ai-navbar-links">
-              <SignedIn>
+              {/* <SignedIn>
                 <li><Link href="/">Home</Link></li>
-              </SignedIn>
+              </SignedIn> */}
               <li><Link href="#">Features</Link></li>
               <li><Link href="#">About</Link></li>
               <li><Link href="#">Contact Us</Link></li>
             </ul>
 
             {/* UserButton (Right) */}
-            <SignedIn>
+            {/* <SignedIn>
               <div className="ai-navbar-user">
                 <UserButton
                   appearance={{
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
                   }}
                 />
               </div>
-            </SignedIn>
+            </SignedIn> */}
           </nav>
 
 
