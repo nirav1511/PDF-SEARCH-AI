@@ -1,6 +1,5 @@
 // app/layout.js
 import { ClerkProvider, SignedIn } from "@clerk/nextjs";
-import { auth } from "@clerk/nextjs/server";
 import { UserButton } from "@clerk/nextjs";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
@@ -8,9 +7,7 @@ import '../../src/app/custom.css';
 import Footer from './footer'
 import { FaRobot } from "react-icons/fa6";
 
-export default async  function RootLayout({ children }) {
-    const { userId } = await auth();
-
+export default function RootLayout({ children }) {
   return (
     <ClerkProvider
       signInUrl="/login"
@@ -29,19 +26,17 @@ export default async  function RootLayout({ children }) {
 
             {/* Links (Center) */}
             <ul className="ai-navbar-links">
-              {userId && (
+              <SignedIn>
                 <li><Link href="/">Home</Link></li>
-               )}
+              </SignedIn>
               <li><Link href="/">Features</Link></li>
               <li><Link href="/">About</Link></li>
               <li><Link href="/">Contact Us</Link></li>
             </ul>
 
-           
-
-
-             {/* {userId && (
-               <div className="ai-navbar-user">
+            {/* UserButton (Right) */}
+            <SignedIn>
+              <div className="ai-navbar-user">
                 <UserButton
                   appearance={{
                     elements: {
@@ -78,7 +73,7 @@ export default async  function RootLayout({ children }) {
                   }}
                 />
               </div>
-             )} */}
+            </SignedIn>
           </nav>
 
 

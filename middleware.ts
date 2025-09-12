@@ -11,8 +11,9 @@ const isPublicRoute = createRouteMatcher([
 const isProtectedRoute = createRouteMatcher([
   '/',
   '/pdfai',
-
-
+  '/MenuAI',
+  '/translate-ai',
+  '/sign-up(.*)',
 ])
 
 export default clerkMiddleware(async (auth, req) => {
@@ -38,7 +39,8 @@ export const config = {
   matcher: [
     '/',              // protect homepage
     '/pdfai',  // protect /pdfai and all subroutes
-    
+    '/MenuAI',
+    '/translate-ai',
     '/login',
     '/signup',
   ],
