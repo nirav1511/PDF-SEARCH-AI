@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider
       signInUrl="/login"
       signUpUrl="/signup"
+        afterSignInUrl="/"
       
     >
       <html lang="en">
@@ -38,38 +39,43 @@ export default function RootLayout({ children }) {
             {/* <SignedIn> */}
               <div className="ai-navbar-user">
                 <UserButton
+                  afterSignOutUrl="/login"
                   appearance={{
                     elements: {
-                      userButtonPopoverCard:`
+                      userButtonPopoverCard:{
                         background: "#161b23",
                         color: "#e3eeff",
                         boxShadow: "0 0 30px #14f7ff55, 0 2px 8px #1cf8ff20",
                         border: "1.5px solid #233248",
                         borderRadius: "22px",
                         padding: "18px",
-                      `,
-                      userButtonPopoverActionButton: `
+                    },
+                      userButtonPopoverActionButton: {
                         color: "#12eafd",
                         background: "#151d29",
                         borderRadius: "12px",
                         fontWeight: 600,
                         margin: "3px 0"
-                      `,
-                      userButtonPopoverActionButtonIcon: `
+                    },
+                      userButtonPopoverActionButtonIcon: {
                         color: "#12eafd",
-                      `,
-                      userButtonPopoverActionButton__signOut: `
+                    },
+                      userButtonPopoverActionButton__signOut: {
                         color: "#ff65a3",
                         background: "#141a1c"
-                      `
+                      }
+                        
+                      
                     },
-                    variables: `
+                    variables: {
                       colorPrimary: "#12eafd",
                       colorText: "#e3eeff",
                       colorBackground: "#181b23",
                       borderRadius: "22px",
                       fontSize: "15px"
-                    `
+                    }
+                      
+                    
                   }}
                 />
               </div>
