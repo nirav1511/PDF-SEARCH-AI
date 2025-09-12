@@ -40,7 +40,7 @@ export default async  function RootLayout({ children }) {
            
 
 
-             {userId && (
+             {/* {userId && (
                <div className="ai-navbar-user">
                 <UserButton
                   appearance={{
@@ -78,7 +78,7 @@ export default async  function RootLayout({ children }) {
                   }}
                 />
               </div>
-             )}
+             )} */}
           </nav>
 
 
