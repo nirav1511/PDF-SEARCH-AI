@@ -6,13 +6,6 @@ import Link from "next/link";
 import '../../src/app/custom.css';
 import Footer from './footer'
 import { FaRobot } from "react-icons/fa6";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // match the weights you used
-});
-
 
 export default function RootLayout({ children }) {
   return (
@@ -34,11 +27,11 @@ export default function RootLayout({ children }) {
             {/* Links (Center) */}
             <ul className="ai-navbar-links">
               <SignedIn>
-                <li><a href="/">Home</a></li>
+                <li><Link href="/">Home</Link></li>
               </SignedIn>
-              <li><a href="/features">Features</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li><Link href="/features">Features</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
 
             {/* UserButton (Right) */}

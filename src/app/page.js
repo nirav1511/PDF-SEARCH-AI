@@ -9,13 +9,13 @@ export default function page() {
     <p className="feature-hub-sub">Elevate your workflow with intelligent, lightning-fast data extraction.</p>
     <div className="feature-hub-circles">
       
-       <a href="/" className="try-now-btn">Try Now</a>
+       <Link href="/" className="try-now-btn">Try Now</Link>
       <div className="down-arrow">&#8595;</div>
-      <a href="/pdfai" className="feature-hub-circle feature-hub-pdf">
+      <Link href="/pdfai" className="feature-hub-circle feature-hub-pdf">
         <div className="circle-icon">🧠</div>
         <h3>PDF AI-Analyzer</h3>
         <p>Unlock key insights, extract tables, and summarize any PDF in seconds. Experience next-gen AI parsing!</p>
-      </a>
+      </Link>
     </div>
   </div>
 </div>
