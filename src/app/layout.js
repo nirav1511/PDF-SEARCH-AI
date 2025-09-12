@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
               <SignedIn>
                 <li><Link href="/">Home</Link></li>
               </SignedIn>
-              <li><Link href="/features">Features</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
+              <li><Link href="#">Features</Link></li>
+              <li><Link href="#">About</Link></li>
+              <li><Link href="#">Contact Us</Link></li>
             </ul>
 
             {/* UserButton (Right) */}
