@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           <nav className="ai-navbar">
             {/* Logo (Left) */}
             <div className="ai-navbar-logo">
-              <FaRobot className="ai-logo-icon" />
+              {/* <FaRobot className="ai-logo-icon" /> */}
                ALPHANSO <span>AI</span>
             </div>
 
